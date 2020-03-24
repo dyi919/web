@@ -4,29 +4,13 @@
   <title>WEB1 - Welcome</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
 </head>
 
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <input type="button" value="night" onclick="
-  var target = document.querySelector('body');
-    if(this.value === 'night'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = 'day';
-
-      var alist = document.querySelectorAll('a');
-      for(a of alist) a.style.color = 'lightpink';
-    } 
-    else{
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value = 'night';
-
-      var alist = document.querySelectorAll('a');
-      for(a of alist) a.style.color = 'blue';
-    }
-  ">
+  <input type="button" value="night" onclick="nightDayHandler(this);">
   <div id="grid">
     <ol>
       <li><a href="1.html">HTML</a></li>
